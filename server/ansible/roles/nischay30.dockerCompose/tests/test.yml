@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - {role: dockerCompose, docker_compose_version: '1.9.0'}

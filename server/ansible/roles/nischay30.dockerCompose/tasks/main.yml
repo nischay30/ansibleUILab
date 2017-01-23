@@ -1,0 +1,11 @@
+---
+# tasks file for dockerCompose
+- name: Install Docker Compose
+  get_url:
+    url: https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-{{facter_kernel}}-{{facter_hardwaremodel}}
+    dest: /usr/local/bin/docker-compose
+    group: root
+    owner: root
+    force: yes
+    mode: 0755
+    

@@ -1,0 +1,23 @@
+galaxy_info:
+  author: Nischay Goyal
+  description: Install docker on any linux System
+  company: your company (optional)
+  license: license (GPLv2, CC-BY, etc)
+  min_ansible_version: 1.2
+  platforms:
+  - name: Fedora
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
+  
+  galaxy_tags:
+    - development
+    - docker
+    - dockerEngine
+
+dependencies: []

@@ -1,0 +1,11 @@
+node2 ansible_host=172.23.238.228 ansible_user=vagrant swarm_iface=enp0s8 node_name=node2
+node3 ansible_host=172.23.238.187 ansible_user=vagrant swarm_iface=enp0s8 node_name=node3
+node4 ansible_host=172.23.238.226 ansible_user=vagrant swarm_iface=enp0s8 node_name=node4
+[docker-workers]
+
+[docker-masters]
+node2
+node3
+node4
+
+[remove]

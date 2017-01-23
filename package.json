@@ -1,0 +1,46 @@
+{
+  "name": "ansibleui",
+  "version": "1.0.0",
+  "description": "1.) Go to root Directory 2.) npm install 3.) npm run build 4.) npm start 5.) go to http://localhost:8080",
+  "main": "webpack.config.js",
+  "scripts": {
+    "serve": "node ./server/www",
+    "start": "webpack-dev-server --content-base public --hot --inline",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nischay30/AppFabric.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nischay30/AppFabric/issues"
+  },
+  "homepage": "https://github.com/nischay30/AppFabric#readme",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "async": "^2.1.4",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "flexboxgrid": "^6.3.1",
+    "material-ui": "^0.16.6",
+    "path": "^0.12.7",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-router": "^3.0.0",
+    "react-tap-event-plugin": "^2.0.1",
+    "superagent": "^3.3.1"
+  }
+}

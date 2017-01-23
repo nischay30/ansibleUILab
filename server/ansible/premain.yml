@@ -1,0 +1,35 @@
+---
+ - hosts: docker-workers
+   become: true
+   tasks:
+     - name: add the user to docker group
+       shell: >
+         usermod -aG docker {{ansible_user}}
+
+     - name: Add the Flags to access Local docker registery
+       copy: src=files/daemon.json dest=/etc/docker/ force=yes mode=0755
+
+     - name: Restart the docker service
+       shell: >
+         service docker restart       
+  
+   roles:
+     - nischay30.docker
+     - nischay30.dockerCompose
+ 
+ - hosts: docker-masters
+   become: true
+   tasks:
+     - name: add the user to docker group
+       shell: >
+         usermod -aG docker {{ansible_user}}
+
+     - name: Add the Flags to access Local docker registery
+       copy: src=files/daemon.json dest=/etc/docker/ force=yes mode=0755
+
+     - name: Restart the docker service
+       shell: >
+         service docker restart       
+   roles:
+     - nischay30.docker
+     - nischay30.dockerCompose

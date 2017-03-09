@@ -3,7 +3,14 @@ const fs = require('fs');
 const spawn = require('child_process').spawn;
 const async = require('async');
 
+const request = require('superagent');
+
 Router.use(require('body-parser').json());
+
+// Router.post('/a', (req, res) => {
+// 	console.log(req.file);
+
+// });
 
 Router.post('/addNode', function(req, res) {
 	let file = fs.readFileSync('./server/Ansible-Learning/hosts/hosts','utf-8');

@@ -15,7 +15,7 @@
     repo: deb https://apt.dockerproject.org/repo {{ansible_distribution | lower}}-{{ansible_distribution_release}} {{item}}
     state: absent
   with_items:
-    - testing
+#    - testing
     - experimental
 
 - name: Install https support packages for apt
